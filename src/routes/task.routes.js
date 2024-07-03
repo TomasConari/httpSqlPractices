@@ -23,7 +23,7 @@ app.post('/task', tokenVerify, async (req, res) => {
 });
 
 //ver tarea
-app.get('/seeTask', tokenVerify, async (req, res) => {
+app.get('/seeTask', async (req, res) => {
     try {  
         const query = await connection.query(`SELECT * FROM tasks`)
         if(query){
